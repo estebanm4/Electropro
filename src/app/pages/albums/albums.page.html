@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'album', item.id]">
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'medicion', item.id]">
       <ion-label text-wrap>
         <h3>{{ item.title}}</h3>
       </ion-label>
