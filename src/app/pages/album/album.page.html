@@ -1,15 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>album</ion-title>
+    <ion-title>Detalles de la medición</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content text-center>
   <ion-card *ngIf="information">
-  	<ion-card-subtitle text-center> Detalles de la medición: </ion-card-subtitle>
+  	<ion-card-subtitle text-center> Fecha: </ion-card-subtitle>
   	<ion-card-title text-center> {{information.title}} </ion-card-title>
     <ion-card-content>
-      {{ "Medición: " + information.id}}
+      {{ "Número de lectura: " + information.id}}
     </ion-card-content>
   </ion-card>
 </ion-content>

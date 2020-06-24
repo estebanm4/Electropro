@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>albums</ion-title>
+    <ion-title>Mediciones</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,10 +8,18 @@
   <ion-list>
     <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'album', item.id]">
       <ion-label text-wrap>
-        <h3>{{ item.title }}</h3>
+        <h3>{{ item.title}}</h3>
       </ion-label>
       <ion-badge color="tertiary" slot="end">{{item.id}}</ion-badge>
       <ion-badge color="light" slot="start">{{item.id}}</ion-badge>
     </ion-item>
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Consumo promedio: </ion-title>
+    <ion-badge color="medium" slot="end">{{"algo kW"}}</ion-badge>
+    <ion-badge color="warning" slot="end">{{"$ algo"}}</ion-badge><br/>
+  </ion-toolbar>
+</ion-footer>
