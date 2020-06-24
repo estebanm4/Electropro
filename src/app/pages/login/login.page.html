@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color="medium">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<br/>
+<br/>
+<br/>
 <ion-content>
-
+	<div class='center'>
+		<h1>Por favor, inicie sesión</h1>
+	</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+	<form>
+		<ion-list>
+			<ion-item>
+				<ion-label position="stacked"> Usuario </ion-label>
+				<ion-input type='text'></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="stacked"> Contraseña </ion-label>
+				<ion-input type='password'></ion-input>
+			</ion-item>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<ion-item>
+				¿No es usuario registrado? <a routerLink='/signup'> Crear una cuenta </a>
+			</ion-item>
+			<ion-button expand="block" shape='round' color = "primary" (click)="login()"> Iniciar sesión </ion-button>
+		</ion-list>
+	</form>
 </ion-content>
