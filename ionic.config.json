@@ -1,0 +1,7 @@
+{
+  "name": "Electropro1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
