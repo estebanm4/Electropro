@@ -22,10 +22,10 @@ const routes: Routes = [
     		
     	},
     	{
-    		path:'messages',
+    		path:'mediciones',
     		loadChildren:() => 
-    		import('../pages/messages/messages.module').then(
-    			m => m.MessagesPageModule)
+    		import('../pages/albums/albums.module').then(
+    			m => m.AlbumsPageModule)
     		
     	},
     	{
