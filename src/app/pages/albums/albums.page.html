@@ -6,9 +6,9 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'medicion', item.id]">
+    <ion-item button *ngFor="let item of (results | async), let i = index" [routerLink]="['/', 'medicion', item.id]">
       <ion-label text-wrap>
-        <h3>{{ item.title}}</h3>
+        <h3>{{item.title}}</h3>
       </ion-label>
       <ion-badge color="tertiary" slot="end">{{item.id}}</ion-badge>
       <ion-badge color="light" slot="start">{{item.id}}</ion-badge>
@@ -16,10 +16,16 @@
   </ion-list>
 </ion-content>
 
+<!-- <ion-footer>
+ <ion-toolbar> 
+  <ion-title>{{total_avg}}</ion-title>
+ <ion-toolbar>
+<ion-footer>  -->
+
 <ion-footer>
   <ion-toolbar>
     <ion-title>Consumo promedio: </ion-title>
-    <ion-badge color="medium" slot="end">{{"algo kW"}}</ion-badge>
-    <ion-badge color="warning" slot="end">{{"$ algo"}}</ion-badge><br/>
+    <ion-badge color="medium" slot="end">{{total_avg+"kW"}}</ion-badge>
+    <ion-badge color="warning" slot="end">{{"$" + consum_avg}}</ion-badge><br/>
   </ion-toolbar>
 </ion-footer>
